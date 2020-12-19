@@ -80,27 +80,6 @@ def get_jobs(keyword, num_jobs, verbose, path, slp_time):
                 except:
                     time.sleep(5)
 
-            '''
-            try:
-                company_name = driver.find_element_by_xpath('.//div[@class="employerName"]').text
-            except:
-                company_name = -1
-            try:
-                location = driver.find_element_by_xpath('.//div[@class="location"]').text
-            except:
-                location = -1
-            try:
-                job_title = driver.find_element_by_xpath('.//div[contains(@class, "title")]').text
-            except:
-                job_title = -1
-                    #job_description = driver.find_element_by_xpath('.//div[@class="jobDescriptionContent desc"]').text            
-                        
-            try:
-                job_description = driver.find_element_by_xpath('.//div[@class="jobDescriptionContent desc"]').text
-            except:
-                job_description = -1
-                
-            '''
             try:
                 salary = driver.find_element_by_xpath('.//span[@class="css-1uyte9r css-hca4ks e1wijj242"]')
                 salary_estimate = driver.execute_script('return arguments[0].firstChild.textContent;', salary).strip()
