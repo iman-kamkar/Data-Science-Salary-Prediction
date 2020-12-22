@@ -71,7 +71,7 @@ df['excel'] = df['job description'].apply(lambda x: 1 if 'exel' in x.lower() els
 print(df.excel.value_counts())
 
 
-df.to_csv('salary_data_clean.csv')
+df.to_csv('salary-data-clean.csv', index=False)
 
 
 
