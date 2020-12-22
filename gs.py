@@ -10,5 +10,5 @@ import pandas as pd
 
 path = "/Volumes/Macintosh Data/Data Science/my_projects/ds_salary_project/chromedriver"
 
-df = gs.get_jobs('data scientist', 1000, False, path, 15)
+df = gs.get_jobs('data scientist', 10, False, path, 15)
 df.to_csv(r'glassdoor.csv')
