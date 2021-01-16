@@ -10,13 +10,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('eda_data.csv')
-
+#### To Do
 # Choose relavant columns
-df.columns 
+# get dummy variables
+# train test split
+# multiple linear regression
+# lasso regression
+# random forest
+# tune models GridSearchCV
+# test ensembles
 
 df_model = df[['avg_salary', 'rating', 'size', 'type of ownership', 'industry', 
-               'sector', 'revenue', 'state', 'age', 'python', 'R', 'spark', 
-               'aws', 'cloud', 'seniority', 'state', 'desc_len']]
+               'sector', 'revenue', 'job_state', 'age', 'python', 'R', 'spark', 
+               'aws', 'cloud', 'seniority', 'desc_len']]
 # dummy variables
 df_dum = pd.get_dummies(df_model)
 
