@@ -1,4 +1,5 @@
-# Glassdoor Data Science Jobs Salary Prediction: Overview
+# Data Science Salary Prediction: Overview
+
 * Created a tool that estimates the salary of data scientist (MAE ~ $11K). This can help data scientist to be able to negotiate about their salary.
 * Scrapped over 1000 job advertisements from glassdoor.com using Python and Selenium.
 * Engineered features from each job description to quantify the value each company put on various skills such as python, excel, aws, and spark.
