@@ -38,6 +38,24 @@ As data should be in a proper format to be able to use for prediction model, I n
 * New columns are made for title of the job (whether it is data scientist, data analyst, ML engineer, etc) and seniority.
 * New column are made for the length of job description
 
+# Model Building
+To build prediction models, I transformed categorical features to dummy variables. I have also split the data into training set (80%) and test set (20%).
+I built three different models and evaluated them using Mean Absolute Error (MAE) as this metric is easy to interpret.
+The models that are used are as follows:
++ **Linear regression** - This is the baseline model
++ **Lasso regression** - As the data is sparse because of dummy variables obtained from encoding categorical features, I this linear regression with l1-norm penalty can address this sparsity. 
++ **Random forest** - Again, due to the sparsity in the data this could be a good model. Further, random forest can capture the nonlinearity in the data. 
+
+# Perfomance of the models
+Random forest outperforms two other models on the validation and test set. 
+
++ **Random forest**: MAE = 10.55
++ **Lasso regression**: MAE = 18.63 
++ **Linear regression**: MAE = 47.55
+
+# Productionization
+
+In this step, I built a flask API endpoint that was hosted on a local webserver. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.
 
 
 
